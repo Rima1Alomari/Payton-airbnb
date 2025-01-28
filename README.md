@@ -32,7 +32,7 @@ availability_percentage
 
 
 
-# 3 Let`s Count the busiest day! 🚩
+# 3. Let`s Count the busiest day! 🚩
 ### Hint: We will be counting the most unavailable days (given by f)
 
 ```python
@@ -43,7 +43,7 @@ print(busiest_dates.head())
 <img src="https://github.com/user-attachments/assets/d48db258-db5c-4540-8bed-fea72e6e4799" alt="Value Counts Output" width="600"/>
 
 
-## 4.Plot a bar graph to show availability percentage
+## 4. Plot a bar graph to show availability percentage
 ```python
 import matplotlib.pyplot as plt
 availability_percentage.plot(kind='bar', color=['green', 'red'])
@@ -53,6 +53,19 @@ plt.xlabel('Available (t/f)')
 plt.show()
 ```
 <img src="https://github.com/user-attachments/assets/842a5c3a-1290-4d28-88a3-533e2ad4a4ac" alt="Value Counts Output" width="600"/>
+
+# 5. Plot the busiest day
+```python
+busiest_dates.head(10).plot(kind='bar', color='orange')
+plt.title('Top 10 Busiest Dates')
+plt.ylabel('Number of Listings Unavailable')
+plt.xlabel('Date')
+plt.show()
+```
+<img src="https://github.com/user-attachments/assets/057f0077-9595-45af-822f-ef871dd92c17" alt="Value Counts Output" width="600"/>
+
+
+
 
 
 
