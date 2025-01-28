@@ -3,5 +3,4 @@
 If you’re working with Google Colab, the .gz file format won’t cause you any issues.
 import pandas as pd
 calendar = pd.read_csv('https://data.insideairbnb.com/france/ile-de-france/paris/2024-09-06/data/calendar.csv.gz')
-![image](https://github.com/user-attachments/assets/4d68453e-2d5d-47bf-9982-178a6b72ebfa)
-
+![image](https://github.com/user-attachments/assets/05b15fe2-66f5-4b90-9cc2-a986eef9f48f)
