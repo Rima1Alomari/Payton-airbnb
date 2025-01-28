@@ -73,6 +73,8 @@ listings = pd.read_csv('/content/listings (1).csv')
 <img src="https://github.com/user-attachments/assets/dbcd1059-5919-4ebd-811b-16301377c45a" alt="Value Counts Output" width="600"/>
 <img src="https://github.com/user-attachments/assets/57fd9f4d-fb5b-4610-b334-d8f01315a12d" alt="Value Counts Output" width="600"/>
 
+## listings.columns
+<img src="https://github.com/user-attachments/assets/f5ca7a9b-e37d-4e54-9952-baa8f12fa393" alt="Value Counts Output" width="600"/>
 
 
 
