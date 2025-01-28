@@ -20,6 +20,7 @@ calendar.available.value_counts()
 ## 2. Purpose: Calculates the percentage of available (t) and unavailable (f) dates.
 #### Explanation:
 value_counts(normalize=True) gives proportions.
+
 Multiplying by 100 converts the proportions into percentages
 ```python
 availability_percentage = calendar['available'].value_counts(normalize=True) * 100
@@ -27,3 +28,14 @@ availability_percentage
 ```
 
 ![image](https://github.com/user-attachments/assets/932c9bb6-6288-41d5-bda0-fb901729417a)
+
+# 3 Let`s Count the busiest day! 🚩
+## Hint: We will be counting the most unavailable days (given by f)
+
+```python
+busiest_dates = calendar[calendar['available'] == 'f']['date'].value_counts()
+print("Busiest Dates:")
+print(busiest_dates.head())
+```
+![image](https://github.com/user-attachments/assets/d48db258-db5c-4540-8bed-fea72e6e4799)
+
