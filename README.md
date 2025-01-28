@@ -16,3 +16,14 @@ calendar = pd.read_csv('https://data.insideairbnb.com/france/ile-de-france/paris
 calendar.available.value_counts()
 ```
 ![image](https://github.com/user-attachments/assets/9d7764f9-d60a-4773-ac16-096a779ae55a)
+
+## 2. Purpose: Calculates the percentage of available (t) and unavailable (f) dates.
+#### Explanation:
+value_counts(normalize=True) gives proportions.
+Multiplying by 100 converts the proportions into percentages
+```python
+availability_percentage = calendar['available'].value_counts(normalize=True) * 100
+availability_percentage
+```
+
+![image](https://github.com/user-attachments/assets/932c9bb6-6288-41d5-bda0-fb901729417a)
