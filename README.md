@@ -9,3 +9,10 @@ calendar = pd.read_csv('https://data.insideairbnb.com/france/ile-de-france/paris
 ![image](https://github.com/user-attachments/assets/05b15fe2-66f5-4b90-9cc2-a986eef9f48f)
 ![image](https://github.com/user-attachments/assets/5a8c1ef4-83db-409f-a7f4-a829bf1222fb)
 
+# Questions
+## 1. Want to know the number of available and unavailable rooms
+
+```python
+calendar.available.value_counts()
+```
+![image](https://github.com/user-attachments/assets/9d7764f9-d60a-4773-ac16-096a779ae55a)
