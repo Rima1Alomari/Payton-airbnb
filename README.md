@@ -70,10 +70,8 @@ https://data.insideairbnb.com/france/ile-de-france/paris/2024-09-06/visualisatio
 import pandas as pd
 listings = pd.read_csv('/content/listings (1).csv')
 ```
-<img src="Screenshot 2025-01-28 at 12 39 53 PM" src="https://github.com/user-attachments/assets/bafe2e61-6980-469d-acff-8420e476175f" alt="Value Counts Output" width="600"/>
-
-
-
+<img src="https://github.com/user-attachments/assets/dbcd1059-5919-4ebd-811b-16301377c45a" alt="Value Counts Output" width="600"/>
+<img src="https://github.com/user-attachments/assets/57fd9f4d-fb5b-4610-b334-d8f01315a12d" alt="Value Counts Output" width="600"/>
 
 
 
