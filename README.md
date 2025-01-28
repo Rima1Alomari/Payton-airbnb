@@ -64,6 +64,16 @@ plt.show()
 ```
 <img src="https://github.com/user-attachments/assets/057f0077-9595-45af-822f-ef871dd92c17" alt="Value Counts Output" width="600"/>
 
+# 📄 Download listings dataset of Paris from 
+https://data.insideairbnb.com/france/ile-de-france/paris/2024-09-06/visualisations/listings.csv
+```python
+import pandas as pd
+listings = pd.read_csv('/content/listings (1).csv')
+```
+<img src="Screenshot 2025-01-28 at 12 39 53 PM" src="https://github.com/user-attachments/assets/bafe2e61-6980-469d-acff-8420e476175f" alt="Value Counts Output" width="600"/>
+
+
+
 
 
 
