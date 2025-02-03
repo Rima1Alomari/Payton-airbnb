@@ -32,7 +32,7 @@ availability_percentage
 
 
 
-# 3. Let`s Count the busiest day! 🚩
+## 3. Let`s Count the busiest day! 🚩
 ### Hint: We will be counting the most unavailable days (given by f)
 
 ```python
@@ -54,7 +54,7 @@ plt.show()
 ```
 <img src="https://github.com/user-attachments/assets/842a5c3a-1290-4d28-88a3-533e2ad4a4ac" alt="Value Counts Output" width="600"/>
 
-# 5. Plot the busiest day
+## 5. Plot the busiest day
 ```python
 busiest_dates.head(10).plot(kind='bar', color='orange')
 plt.title('Top 10 Busiest Dates')
@@ -64,7 +64,7 @@ plt.show()
 ```
 <img src="https://github.com/user-attachments/assets/057f0077-9595-45af-822f-ef871dd92c17" alt="Value Counts Output" width="600"/>
 
-# 📄 Download listings dataset of Paris from 
+### 📄 Download listings dataset of Paris from 
 https://data.insideairbnb.com/france/ile-de-france/paris/2024-09-06/visualisations/listings.csv
 ```python
 import pandas as pd
@@ -92,6 +92,7 @@ plt.xlabel('Room Type')
 plt.show()
 ```
 <img src="https://github.com/user-attachments/assets/2ca14676-60ad-4511-9dfa-d3629d87d4b7" alt="Value Counts Output" width="600"/>
+
 ## Which are the top 10 neighborhoods with the most listings?
 
 ```python
