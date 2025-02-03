@@ -124,7 +124,54 @@ plt.show()
 ```
 <img src="https://github.com/user-attachments/assets/d0c0d38b-ce34-4db9-a414-866ea958d325" alt="Value Counts Output" width="600"/>
 
+## Let us see the listings on a real map
+##### 
+* Hotter Areas (Red/Yellow):
+High Density: The areas that appear in red or yellow (the "hot" colors) indicate higher density or concentration of listings. This means there are more listings in these areas.
+Popular Locations: These regions might be more popular or in high demand. It could be near tourist attractions, popular neighborhoods, or central areas in Paris where people tend to stay more often.
 
+* Colder Areas (Green/Blue):
+Low Density: Areas with blue or green (the "cold" colors) indicate a lower concentration of listings. These regions have fewer listings available.
+Less Popular Locations: These areas might be less popular or further from key attractions. If you're looking at pricing or other factors, lower density could imply less competition in these regions, which might indicate more affordable areas or less tourist traffic.
 
+* Density Patterns:
+Clustered Areas: If you notice clusters of heatmap intensity, they represent hotspots. These might correspond to high-traffic areas like resorts, beaches, or urban centers.
+Spread-Out Listings: If the heatmap shows a more uniform distribution, it could suggest that listings are more evenly spread across the region, which may reflect a more balanced demand for rentals across different areas of Paris.
 
+```python
+import folium
+from folium.plugins import HeatMap
+import pandas as pd
+
+# Example dataset for Paris coordinates (replace with your actual data)
+paris_data = listings[['latitude', 'longitude', 'price']]  # Example, you may add more columns
+
+# Create a base map centered around Paris
+m = folium.Map(location=[48.8566, 2.3522], zoom_start=12)  # Paris coordinates
+
+# Prepare the data for the heatmap
+heat_data = [[row['latitude'], row['longitude']] for index, row in paris_data.iterrows()]
+
+# Add the heatmap to the map
+HeatMap(heat_data).add_to(m)
+
+# Save the map as an HTML file to view in a browser
+m.save('paris_heatmap.html')
+
+# If you're using Jupyter Notebook, you can display the map directly in the notebook:
+m
+
+```
+<img src="https://github.com/user-attachments/assets/a0cc5ce2-a117-4ba9-bdee-a3be69baa0f0" alt="Value Counts Output" width="600"/>
+
+## How do I find location for my city?
+#####
+* Type your city name on google maps
+* Click on What`s here
+
+<img src="https://github.com/user-attachments/assets/2913a415-43ca-4ddc-8f24-f06e23f94eaf" alt="Value Counts Output" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/6403ebaf-b6b5-4706-a070-ae2bc50465a6" alt="Value Counts Output" width="600"/>
+
+<img src="https://github.com/user-attachments/assets/b13460b5-fc19-4555-a000-97c364d0e8d7" alt="Value Counts Output" width="600"/>
 
