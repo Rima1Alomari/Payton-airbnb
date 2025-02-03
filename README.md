@@ -175,21 +175,23 @@ m
 
 <img src="https://github.com/user-attachments/assets/b13460b5-fc19-4555-a000-97c364d0e8d7" alt="Value Counts Output" width="600"/>
 
-## 6. Which are the top dates with the most unavailable listings in Paris?
+## 6. How do prices vary across different neighborhoods in Paris
 ```python
-# Find the busiest unavailable dates in Paris
-busiest_dates = calendar[calendar['available'] == 'f']['date'].value_counts()
-print("Busiest Dates in Paris (Most Unavailable Listings):")
-print(busiest_dates.head())
+# Group by neighborhood and calculate the average price
+price_by_neighborhood = listings.groupby('neighbourhood')['price'].mean()
 
-# Plot the busiest dates
-busiest_dates.head(10).plot(kind='bar', color='orange')
-plt.title('Top 10 Busiest Dates with Unavailable Listings in Paris')
-plt.ylabel('Number of Listings Unavailable')
-plt.xlabel('Date')
+# Sort neighborhoods by average price
+price_by_neighborhood = price_by_neighborhood.sort_values(ascending=False)
+
+# Plot average prices by neighborhood
+price_by_neighborhood.plot(kind='bar', color='lightgreen')
+plt.title('Average Price by Neighborhood in Paris')
+plt.ylabel('Average Price')
+plt.xlabel('Neighborhood')
+plt.xticks(rotation=90)
 plt.show()
 ```
-<img src="https://github.com/user-attachments/assets/7553a6cd-39f9-419d-b6d2-951d6d3a0bfd" alt="Value Counts Output" width="600"/>
+<img src="https://github.com/user-attachments/assets/5e118e4b-4e0d-4cec-86e5-c8fddc593fb1" alt="Value Counts Output" width="600"/>
 
 ## 7. What are the most common room types in Paris?
 ```python
