@@ -191,16 +191,20 @@ plt.show()
 ```
 <img src="https://github.com/user-attachments/assets/7553a6cd-39f9-419d-b6d2-951d6d3a0bfd" alt="Value Counts Output" width="600"/>
 
-## 7. Is there a relationship between price and geographical location of listings in Paris?
+## 7. What are the most common room types in Paris?
 ```python
-# Plotting the relationship between price and geographical location (longitude and latitude)
-plt.figure(figsize=(10, 6))
-sns.scatterplot(data=listings, x='longitude', y='latitude', hue='price', palette='coolwarm', size='price', sizes=(10, 200))
-plt.title('Price vs Geographical Location in Paris')
-plt.xlabel('Longitude')
-plt.ylabel('Latitude')
+# Count the most common room types in Paris
+room_type_counts = listings['room_type'].value_counts()
+print("Most Common Room Types in Paris:")
+print(room_type_counts)
+
+# Plot a bar graph showing the most common room types
+room_type_counts.plot(kind='bar', color='lightblue')
+plt.title('Most Common Room Types in Paris')
+plt.ylabel('Number of Listings')
+plt.xlabel('Room Type')
 plt.show()
 ```
-<img src="https://github.com/user-attachments/assets/9b4e0873-299b-4820-b80c-0e62fd76f0cd" alt="Value Counts Output" width="600"/>
+<img src="https://github.com/user-attachments/assets/5ff59dac-e56d-4ed6-931c-d07b9710fcd7" alt="Value Counts Output" width="600"/>
 
 
